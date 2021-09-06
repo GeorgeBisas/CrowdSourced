@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%; margin: 0%; padding: 0%;">
+
+<head>
+    <title>Location History</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Leaflet styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <!-- Mapbox styling -->
+    <link href='css/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Button styling -->
+    <link href='css/buttons.css' rel='stylesheet' />
+    <!-- JQuery lib -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- Leaflet js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
+
+    <style>
+        body { margin:0; padding:0; }
+        #mymap { position:absolute; top:0; bottom:0; height:100%; width:100%; }
+    </style>
+
+</head>
+
+<body style="background-color: #343332; width: 100%; height: 100%; margin: 0%; padding: 0%;">
+    <div id='mymap'></div>
+
+    <div class="btn-align">
+        <div class="bouncy" style="display: inline-block;">
+            <label class="button1">
+                Upload JSON
+                <input type="file" id="JSONFile" accept=".json" style="display: none" />
+            </label>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="bouncy" style="display: inline-block; animation-delay:0.8s">
+            <label class="button1">
+                <a href="file-upload.php">Upload JSON to DB</a>
+			</label>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="bouncy" style="display: inline-block; animation-delay:1.4s"" >
+            <label class="button1">
+				Export as...
+                <div>
+                    <a href="#">CSV</a>
+                    <a href="#">XML</a>
+                    <a href="#">JSON</a>
+                </div>
+            </label>
+        </div>
+        <div class="bouncy" style="display: inline-block; animation-delay:2.0s">
+            <label class="button1">
+                <a href="..\delete_Data_From_DB\deleteDataFromDB.php">Delete Data from DB</a>
+			</label>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="bouncy" style="display: inline-block; animation-delay:2.6s">
+            <label class="button1">
+                <a href="..\admin_and_user_login\admin\home.php?logout='1'" style="color: red;">Logout</a>
+			</label>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="container" style="width: 100%; height: 100%;"></div>
+    <div id="time-range" style="width: 100%; position: fixed; bottom: 8px;">
+        <p>Time Range: 
+			<span class="slider-time"></span> - <span class="slider-time2"></span>
+        </p>
+    </div>    
+    <div id="slider-range" style="width: 100%; position: fixed; bottom: 4px;"></div>
+
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-gl.min.js"></script>
+    <script src='js/mapbox-gl.js'></script>
+    <script src="js/leaflet-mapbox-gl.js"></script>
+    <script src="js/load-map.js"></script>
+    <script src="js/load-json.js"></script>
+
+</body>
+
+</html>

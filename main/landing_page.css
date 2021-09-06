@@ -1,0 +1,101 @@
+body,html {
+    font-family: 'Ubuntu',sans-serif;
+    height: 100%;
+    margin:0;
+}
+input{
+    font-family: 'Ubuntu',sans-serif;
+}
+body {
+    background: #FFFFFF url('../main/World_Population.svg') no-repeat;
+    background-position: center; 
+}
+h2 {
+    animation: fadeINleft 1s ease-in-out forwards;
+    margin-top: 2em;
+    color: #695A69;
+    text-decoration: none;
+}
+
+
+.cta {
+    animation: fadeIN 2s ease-in-out 1s forwards;
+    opacity: 0;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #695A69;
+    border: none;
+    border-radius: 66px;
+    box-shadow: 0 9px #534853;
+    margin-top: 10em;
+  }
+  
+  .cta:hover {background-color: #534853}
+  
+  .cta:active {
+    background-color: #fdd835;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+  }
+/* CSS GRIDS and media queries */
+#home-container{
+    display: grid;
+    grid-template-columns: 1fr,1fr,1fr,1fr;
+    grid-template-areas: 
+    ". left ."
+    ". right .";
+    height: 100%;
+}
+
+@media screen and (min-width: 320px){
+    #home-container{
+        display: grid;
+        grid-template-columns: .5fr,1fr,1fr,.5fr;
+        grid-gap: 10px;
+        grid-template-areas: ". left right .";
+        height: 100%;
+    }
+}
+
+#inner{
+    grid-area: left;
+    align-self: center;
+    justify-self: center;
+}
+
+#illustration{
+    grid-area: right;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+  @keyframes fadeIN{
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+
+  @keyframes fadeINleft{
+
+    from{
+        opacity: 0;
+        transform: translateX(-700px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
