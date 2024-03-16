@@ -1,44 +1,17 @@
 # CrowdSourced Project
- 
- Η εργασία αυτή δημιουργήθηκε από τον Γεώργιο Μπίσα φοιτητή του τμήματος Μηχανικών Ηλεκτρονικών Υπολογιστών και Πληροφορικής του Πανεπιστημίου Πατρών.
- 
-Απεικόνιση στοιχείων σε χάρτη - διαχειριστής. 
-Επιλέγοντας ένα εύρος τιμών, δηλαδή έτος, μήνα (Ιαν.-Δεκ.), ημέρα (Δευτέρα - Κυριακή),
-ώρα (0-23) και δραστηριότητα, εμφανίζονται σε οθόνη χάρτη με μορφή σημείων οι πληροφορίες
-τοποθεσίας των χρηστών. Ο διαχειριστής μπορεί να επιλέξει εύρος τιμών από τις παραπάνω
-επιλογές, ήτοι έτη (π.χ. «2017-2019»), ημέρα (π.χ. «Σάββατο – Κυριακή»), ώρα (π.χ. «20:00 –
-23:00»), δραστηριότητα με πολλαπλή επιλογή (π.χ. «WALKING και STILL»), ή για κάποιο κριτήριο να
-επιλέξει «όλα». Επίσης απεικονίζεται με γράφημα η κατανομή των δραστηριοτήτων των χρηστών 
-(ποσοστό εγγραφών ανά τύπο δραστηριότητας).
 
-Διαγραφή δεδομένων - διαχειριστής. 
-Επιλέγοντας αυτή τη λειτουργία και κατόπιν επιβεβαίωσης, το σύστημα
-διαγράφει όλα τα δεδομένα στη βάση.
+This work was created by Georgios Bitsas, a student of the Department of Computer Engineering and Informatics at the University of Patras.
 
-Εξαγωγή δεδομένων - διαχειριστής.
-Έχουν υλοποιηθεί οι συναρτήσεις για την εξαγωγή των δεδομένων σε από json σε csv και xml.
+Display of data on a map - administrator. By selecting a range of values, such as year, month (Jan.-Dec.), day (Monday - Sunday), hour (0-23), and activity, the location information of users is displayed on a map screen in the form of points. The administrator can choose a range of values from the above options, such as years (e.g., "2017-2019"), day (e.g., "Saturday - Sunday"), hour (e.g., "20:00 - 23:00"), activity with multiple selections (e.g., "WALKING and STILL"), or choose "all" for a certain criterion. Also, the distribution of user activities is depicted on a graph (percentage of records by activity type).
 
+Data deletion - administrator. By selecting this function and confirming, the system deletes all data in the database.
 
-Εγγραφή στο σύστημα. 
-Ο χρηστής εγγράφεται και αποκτά πρόσβαση στο σύστημα επιλέγοντας κάποιο username & password της αρεσκείας του, 
-και παρέχοντας το email του. Το password πρέπει να είναι τουλάχιστον 8 χαρακτήρες και να περιέχει τουλάχιστον ένα 
-κεφαλαίο γράμμα, ένα αριθμό και κάποιο σύμβολο (π.χ. #$*&@). Το σύστημα δημιουργεί ένα μοναδικό αναγνωριστικό (user id) 
-για τον κάθε εγγεγραμμένο χρήστη με τη χρήση 2-way encryption, χρησιμοποιώντας το email του χρήστη και κλειδί το 
-password του χρήστη. Το password του χρήστη θα πρέπει να αποθηκεύεται στη συνέχεια στη ΒΔ ως hashed τιμή (π.χ. MD5).
+Data export - administrator. Functions for exporting data from JSON to CSV and XML have been implemented.
 
-Απεικόνιση στοιχείων χρήστη. 
-Αμέσως μετά την είσοδο στο σύστημα, εμφανίζονται:
-a. Το score οικολογικής μετακίνησης του χρήστη (ποσοστό τοποθεσιών με δραστηριότητα
-σώματος σε σχέση με όλες τις δραστηριότητες μετακίνησης) για τον τρέχοντα μήνα. Για
-παράδειγμα, αν έχει 100 τοποθεσίες με δραστηριότητα σώματος και 50 με όχημα, το σκορ
-του είναι 100/150 = 66%. Επίσης εμφανίζεται γράφημα με το score του χρήστη για τους
-τελευταίους 12 μήνες.
-b. η περίοδος που καλύπτουν οι εγγραφές του χρήστη με γράφημα.
+User registration. The user registers and gains access to the system by choosing a username & password of their preference and providing their email. The password must be at least 8 characters long and contain at least one uppercase letter, one number, and one symbol (e.g., #$*&@). The system creates a unique identifier (user ID) for each registered user using 2-way encryption, using the user's email and the password as the key. The user's password should then be stored in the database as a hashed value (e.g., MD5).
 
-Ανάλυση στοιχείων χρήστη. 
-Ο χρήστης επιλέγει ένα χρονικό διάστημα. Τα στοιχεία εμφανίζονται με τη  μορφή γραφημάτων που αφορούν 
-το ποσοστό εγγραφών ανά είδος δραστηριότητας.
+Display of user information. Immediately after logging into the system, the following are displayed: a. The user's ecological mobility score (percentage of locations with physical activity compared to all mobility activities) for the current month. For example, if there are 100 locations with physical activity and 50 with vehicle activity, the user's score is 100/150 = 66%. Also displayed is a graph showing the user's score for the last 12 months. b. The period covered by the user's records with a graph.
 
-Upload δεδομένων. 
-Ο χρήστης μπορεί να επιλέξει κάποιο αρχείο δεδομένων για να το ανεβάσει τη
-ΒΔ.
+User data analysis. The user selects a time period. The data is displayed in the form of graphs showing the percentage of records by activity type.
+
+Data upload. The user can select a data file to upload to the database.
