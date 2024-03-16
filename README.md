@@ -1,6 +1,6 @@
 # CrowdSourced Project
 
-This work was created by Georgios Bitsas, a student of the Department of Computer Engineering and Informatics at the University of Patras.
+This work was created by Georgios Bisas, a student of the Department of Computer Engineering and Informatics at the University of Patras.
 
 Display of data on a map - administrator. By selecting a range of values, such as year, month (Jan.-Dec.), day (Monday - Sunday), hour (0-23), and activity, the location information of users is displayed on a map screen in the form of points. The administrator can choose a range of values from the above options, such as years (e.g., "2017-2019"), day (e.g., "Saturday - Sunday"), hour (e.g., "20:00 - 23:00"), activity with multiple selections (e.g., "WALKING and STILL"), or choose "all" for a certain criterion. Also, the distribution of user activities is depicted on a graph (percentage of records by activity type).
 
